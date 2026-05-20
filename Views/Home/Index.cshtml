@@ -1,8 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Recetify";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <section>
+        <div class = "Principal">
+            <h1>Recetify</h1>
+            <form action='@Url.Action("SugeridorReceta", "Home")' method="GET" enctype="application/x-www-form-urlencoded">
+                Nombre: <input type="text" name="nombre" />
+                <br>
+                <br>
+                Fecha de nacimiento: <input type="date" name="fechaNacimiento" />
+                <br>
+                <br>
+                Tipo de comida:
+                <input type="radio" name="tipoComida" value="Caliente"> Caliente
+                <input type="radio" name="tipoComida" value="Frío"> Frío
+                <br>
+                <br>
+                Presupuesto: <input type="range" max="10000" min="1000"step="1000" name="presupuesto"/>
+                <br>
+                <br>
+                Cantidad de comensales: <input type="range" max="10" min="1"step="1" name="cantidadComensales"/>
+                <br>
+                <br>
+                <input type="submit" value="Submit form">
+                <input type="reset" value="Reset form">
+            </form>
+        </div>
+        <h2>Platos calientes</h2>
+        <img src="Imagenes/FideosManteca.jpg" alt="Uno de los platos que ofrecemos">
+        <img src="Imagenes/ArrozVerduras.png" alt="Uno de los platos que ofrecemos">
+        <img src="Imagenes/PolloGuarnicion.png" alt="Uno de los platos que ofrecemos">
+        <h2 class="Cold">Platos frios</h2>
+        <img class="Colder" src="Imagenes/EnsaladaSimple.png" alt="Uno de los platos que ofrecemos">
+        <img class="Colder" src="Imagenes/EnsaladaCompleta.png" alt="Uno de los platos que ofrecemos">
+        <img class="Colder" src="Imagenes/TablaFiambres.png" alt="Uno de los platos que ofrecemos">
+    </section>
+</body>
